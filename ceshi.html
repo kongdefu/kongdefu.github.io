@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .dd{
+        width: 40px;
+        height: 40px;
+        background-color: red;
+        float: left;
+        margin: 2px;
+    }
+    .aa{
+        border:5px solid blue;
+    }
+
+    /*IE6采用zoom*/
+      .clearfix{
+          *zoom:1;
+      }
+
+    /*IE8+采用伪类*/
+      .clearfix:after{
+          display:block;
+          clear:both;/*clear:both的实现方法*/
+          content:"";
+          overflow:hidden;
+          height:0;
+      }
+    /*.clearfix{*/
+        /*overflow: hidden;*/
+    /*}*/
+</style>
+<body>
+<div class="aa clearfix">
+    <div class="dd"></div>
+    <div class="dd"></div>
+    <div class="dd"></div>
+    <a href="#">hello</a>
+</div>
+</body>
+</html>
